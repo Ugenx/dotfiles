@@ -1,0 +1,29 @@
+# ~/.config/ghostty/config — Ghostty Quality-of-Life Configuration
+
+# --- Font ---
+font-family = "Hack Nerd Font"
+font-size = 13
+
+# --- Shell Integration & SSH Fix ---
+# Enables cursor, sudo, title, and automatic remote terminfo/env forwarding over SSH
+shell-integration-features = cursor,sudo,title,ssh-terminfo,ssh-env
+
+# --- macOS Ergonomics ---
+# Use left Option as Alt/Meta (great for fzf Alt-C and word-jump shortcuts)
+# while keeping right Option for macOS special characters
+macos-option-as-alt = left
+macos-titlebar-style = tabs
+
+# --- Window & Scrolling ---
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+scrollback-limit = 25000000
+
+# --- Selection & Mouse ---
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+
+# --- Theme (optional) ---
+# Run `ghostty +list-themes` to preview built-in themes, then uncomment below:
+# theme = light:Rose Pine Dawn,dark:Rose Pine

@@ -1,0 +1,10 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOf89U82lD/adI8kOM1lPyZ6XDJ+uiHAAW2IGwdb5UX8
+	name = Kamil
+	email = kahmeal@gmail.com
