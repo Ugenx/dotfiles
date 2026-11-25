@@ -8,3 +8,67 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOf89U82lD/adI8kOM1lPyZ6XDJ+uiHAAW2IGwdb5UX8
 	name = Kamil
 	email = kahmeal@gmail.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = code --wait
+	autocrlf = input
+	quotepath = false
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = current
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[rebase]
+	autoStash = true
+	autoSquash = true
+
+[merge]
+	conflictStyle = zdiff3
+
+[diff]
+	algorithm = histogram
+	colorMoved = default
+	renames = copies
+
+[rerere]
+	enabled = true
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[column]
+	ui = auto
+
+[help]
+	autocorrect = prompt
+
+[alias]
+	st = status -sb
+	co = checkout
+	sw = switch
+	swc = switch -c
+	br = branch -vv
+	cm = commit -m
+	ca = commit --amend --no-edit
+	can = commit --amend
+	df = diff
+	dfs = diff --staged
+	unstage = reset HEAD --
+	undo = reset --soft HEAD~1
+	pf = push --force-with-lease
+	last = log -1 HEAD --stat
+	ll = log --oneline --decorate -n 20
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all

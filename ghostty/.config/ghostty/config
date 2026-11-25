@@ -13,16 +13,26 @@ shell-integration-features = cursor,sudo,title,ssh-terminfo,ssh-env
 # while keeping right Option for macOS special characters
 macos-option-as-alt = left
 macos-titlebar-style = tabs
+quit-after-last-window-closed = true
 
-# --- Window & Scrolling ---
+# --- Window, Splits & Scrolling ---
 window-padding-x = 10
 window-padding-y = 8
 window-padding-balance = true
+window-save-state = always
+unfocused-split-opacity = 0.85
 scrollback-limit = 25000000
 
-# --- Selection & Mouse ---
+# --- Cursor, Selection & Mouse ---
+cursor-style-blink = false
 copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
 mouse-hide-while-typing = true
+
+# --- Keybinds ---
+# Shift+Enter sends a literal newline (useful for multi-line CLI/agent prompts)
+keybind = shift+enter=text:\n
+keybind = cmd+shift+r=reload_config
 
 # --- Theme (optional) ---
 # Run `ghostty +list-themes` to preview built-in themes, then uncomment below:
